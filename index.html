@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meal Prepping App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" integrity="sha512-zaLwN/5l5D5if51eZ3juUJ2EYmvb6U/08nRpjo3qoOQYZKjSWeJ7OMbX9f27zryMclPW4jKzQL4FlxxcPv50Gw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-eKsTwJ7amjK9og46G8V29dJt+cSk7jHzjsd+q3f66Q2jKCE/PMJb1pSKl1zeRbWY/xk4PTizFz5p6KSyR5J5Mw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js" integrity="sha512-ZH2ePrJb8zLjYJR6ZMDH+01m04KjJWWnMyg1xjaVu8w+jegKsyYn1hzItZ9glMsoJzGcF//5r5C5f/iR5l5blw==" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="app">
+    <header>
+        <h1>Meal Prepping App</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Grocery List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="calendar"></div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Meal Prepping App</p>
+    </footer>
+</div>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add Meal</h2>
+        <form id="meal-form">
+            <label for="meal-title">Title:</label>
+            <input type="text" id="meal-title" name="meal-title" required>
+            <label for="meal-date">Date:</label>
+            <input type="date" id="meal-date" name="meal-date" required>
+            <label for="meal-time">Time:</label>
+            <input type="time" id="meal-time" name="meal-time" required>
+            <label for="meal-recipe">Recipe:</label>
+            <textarea id="meal-recipe" name="meal-recipe"></textarea>
+            <button type="submit">Add Meal</button>
+        </form>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha384-LJ1+BRggnfH92eXTJd9Z+kJI/+uoGzrYr8qoD3vlN+Tw2ajN1R0enRvtnX9NyIWk" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js" integrity="sha384-wdYiqpkkpiHWb6CgpfOgzufwjVKW8p+IsXmJZ1xhUsIl7YH8aiF2TPAUKyBm/lUE" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
